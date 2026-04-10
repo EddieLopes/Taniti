@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Taniti Static Website Prototype
 
 This is a simple multi-page static website built for a school UX project.
@@ -34,3 +35,7 @@ To publish this site with GitHub Pages:
 - This project is designed for easy editing and learning.
 - No JavaScript is required for the page navigation.
 - The responsive layout is desktop-first but works on smaller screens.
+=======
+# Taniti
+ Interactive prototype for the Tanitian website
+>>>>>>> 6a327c3bb5f89bd51adb2f6cf01055929a26eb27
