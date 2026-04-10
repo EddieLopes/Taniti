@@ -1,0 +1,267 @@
+:root {
+  --bg: #f8f8f7;
+  --surface: #ffffff;
+  --border: #dcdcdc;
+  --text: #212121;
+  --muted: #555555;
+  --accent: #1766d8;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  --radius: 16px;
+}
+
+/* Global page styles */
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+
+/* Page wrapper and spacing */
+.page-content {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 28px 48px;
+}
+
+/* Header navigation */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.nav-link {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: rgba(23, 102, 216, 0.06);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.nav-link:hover,
+.nav-link:focus-visible {
+  background: rgba(23, 102, 216, 0.12);
+  color: var(--text);
+}
+.nav-link.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(23, 102, 216, 0.1);
+}
+
+/* Hero sections */
+.hero-section {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 28px;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  margin-bottom: 28px;
+}
+.hero-section.small-hero {
+  grid-template-columns: 1fr;
+}
+.hero-copy h1 {
+  margin-bottom: 14px;
+  font-size: clamp(2rem, 2.3vw, 2.7rem);
+}
+.hero-copy p {
+  color: var(--muted);
+  max-width: 680px;
+}
+.hero-image {
+  min-height: 230px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: #eef4ff;
+}
+.hero-image-icon {
+  font-size: 3rem;
+}
+
+/* Card sections */
+.card-section {
+  margin-top: 12px;
+}
+.card-section h2 {
+  margin-bottom: 18px;
+  font-size: 1.35rem;
+}
+.card-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+}
+.card-grid.two-column {
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+}
+.card-grid.four-column {
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.card p {
+  color: var(--muted);
+}
+.wide-card {
+  min-height: 220px;
+}
+.notice {
+  margin-top: 18px;
+  font-size: 0.95rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Transportation page layout */
+.transport-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+.transport-card {
+  min-height: 260px;
+}
+.transport-card ul {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+.transport-card li {
+  margin-bottom: 8px;
+}
+.map-placeholder {
+  margin-top: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  text-align: center;
+}
+.map-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Travel Info and FAQ content */
+.info-grid,
+.faq-section {
+  display: grid;
+  gap: 18px;
+}
+.info-grid {
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+}
+.info-card {
+  background: #f3f5ff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+.info-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+.faq-item h2 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+}
+.faq-item p {
+  color: var(--muted);
+}
+
+/* Footer styling */
+.site-footer {
+  padding: 18px 28px;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 980px) {
+  .hero-section,
+  .transport-grid,
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  .card-grid.four-column {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .main-nav {
+    justify-content: center;
+  }
+  .page-content {
+    padding: 18px 16px 36px;
+  }
+  .hero-section {
+    padding: 24px;
+  }
+  .card-grid,
+  .transport-grid,
+  .info-grid {
+    gap: 14px;
+  }
+}
