@@ -13,42 +13,62 @@
 * {
   box-sizing: border-box;
 }
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
-  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: Inter, system-ui, sans-serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.6;
 }
+
 a {
   color: inherit;
   text-decoration: none;
 }
+
 p {
   margin: 0;
 }
 
 /* Page wrapper and spacing */
 .page-content {
+  flex: 1;
   max-width: 1180px;
   margin: 0 auto;
   padding: 24px 28px 48px;
+  width: 100%;
 }
 
 /* Header navigation */
 .site-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 28px;
   background: var(--surface);
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 10;
+}
+
+.header-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 18px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 }
 .brand {
   font-size: 1.6rem;
@@ -104,9 +124,10 @@ p {
   max-width: 680px;
 }
 .hero-image {
-  min-height: 230px;
-  display: grid;
-  place-items: center;
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  overflow: hidden;
   border: 1px solid var(--border);
   border-radius: 18px;
   background: #eef4ff;
@@ -114,28 +135,10 @@ p {
 
 .hero-image img {
   width: 100%;
-  max-width: 500px;
-  height: 300px;
-  overflow: hidden;
-}
-/*
-.hero-section-lodging-image {
-  width: 100%;
-  max-width: 500px;
-  height: 300px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  background: #eef4ff;
-}
-
-.hero-section-lodging-image img {
-  width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-*/
 
 /*.hero-image-icon {
   font-size: 3rem;
@@ -156,6 +159,30 @@ p {
 }
 .card-grid.two-column {
   grid-template-columns: repeat(2, minmax(240px, 1fr));
+}
+.media-card {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 20px;
+  align-items: center;
+}
+.card-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: #eef4ff;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.card-copy h3 {
+  margin-bottom: 12px;
 }
 .card-grid.four-column {
   grid-template-columns: repeat(4, minmax(220px, 1fr));
@@ -193,26 +220,6 @@ p {
 }
 .transport-card {
   min-height: 260px;
-}
-.transport-card ul {
-  margin: 12px 0 0;
-  padding-left: 18px;
-  color: var(--muted);
-}
-.transport-card li {
-  margin-bottom: 8px;
-}
-.map-placeholder {
-  margin-top: 24px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 26px;
-  text-align: center;
-}
-.map-icon {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
 }
 
 /* Travel Info and FAQ content */
