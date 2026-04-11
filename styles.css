@@ -103,7 +103,7 @@ p {
   color: var(--muted);
   max-width: 680px;
 }
-.hero-image {
+.hero-section-image {
   min-height: 230px;
   display: grid;
   place-items: center;
@@ -111,9 +111,9 @@ p {
   border-radius: 18px;
   background: #eef4ff;
 }
-.hero-image-icon {
+/*.hero-image-icon {
   font-size: 3rem;
-}
+}*/
 
 /* Card sections */
 .card-section {
