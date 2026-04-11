@@ -103,7 +103,7 @@ p {
   color: var(--muted);
   max-width: 680px;
 }
-.hero-section-image img {
+.hero-image {
   min-height: 230px;
   display: grid;
   place-items: center;
@@ -112,12 +112,13 @@ p {
   background: #eef4ff;
 }
 
-.hero-section-image img {
+.hero-image img {
   width: 100%;
   max-width: 500px;
   height: 300px;
   overflow: hidden;
 }
+/*
 .hero-section-lodging-image {
   width: 100%;
   max-width: 500px;
@@ -134,6 +135,8 @@ p {
   object-fit: cover;
   display: block;
 }
+*/
+
 /*.hero-image-icon {
   font-size: 3rem;
 }*/
