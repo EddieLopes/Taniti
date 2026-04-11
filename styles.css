@@ -119,10 +119,18 @@ p {
   overflow: hidden;
 }
 .hero-section-lodging-image img {
+  min-height: 230px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: #eef4ff;
+}
+.hero-section-lodging-image img {
   width: 100%;
-  max-width: 500px;
-  height: 300px;
-  object-fit: cover;
+    max-width: 500px;
+    height: 300px;
+    overflow: hidden;
 }
 /*.hero-image-icon {
   font-size: 3rem;
